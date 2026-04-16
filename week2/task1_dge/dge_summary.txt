@@ -1,0 +1,26 @@
+═══════════════════════════════════════════════════════════
+  Week 2 Task 1 — DGE Analysis Summary
+═══════════════════════════════════════════════════════════
+  Samples analysed  : 433
+  Genes tested      : 14,809
+  Design formula    : ~ RIN + PMI + Age + Sex + MGS_level
+  Reference group   : MGS1
+
+  Significance threshold  : padj < 0.05 (primary); padj<0.05 & |log2FC|>=1 (strict)
+
+  MGS4_vs_MGS1
+    padj<0.05          : 40  (up=40  down=0)
+    padj<0.05+|FC|>=1  : 0
+  MGS3_vs_MGS1
+    padj<0.05          : 0  (up=0  down=0)
+    padj<0.05+|FC|>=1  : 0
+  MGS2_vs_MGS1
+    padj<0.05          : 1,037  (up=180  down=857)
+    padj<0.05+|FC|>=1  : 0
+
+  Outputs:
+    DEG_full_results.tsv       — all genes, all contrasts
+    DEG_MGS4_vs_MGS1.tsv       — primary contrast significant DEGs
+    DEG_MGS3_vs_MGS1.tsv
+    DEG_MGS2_vs_MGS1.tsv
+═══════════════════════════════════════════════════════════

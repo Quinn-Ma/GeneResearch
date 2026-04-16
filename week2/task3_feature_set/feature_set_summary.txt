@@ -1,0 +1,36 @@
+===================================================
+  Week 2 Task 3 -- Feature Set Construction
+===================================================
+
+  INPUT
+    DEG table    : 44,427 rows (3 contrasts)
+    VST matrix   : 14,809 genes x 433 samples
+    Gene info    : 63,305 entries
+
+  TRACK A  --  DEG selection
+    Threshold            : padj < 0.05
+    Strict (also |FC|>1) : 0 genes  [AMD effects too subtle]
+    MGS4 vs MGS1         : 40 DEGs (all up)
+    MGS3 vs MGS1         : 0 DEGs
+    MGS2 vs MGS1         : 1037 DEGs (180 up, 857 down)
+    Unique DEGs (union)  : 1,076
+
+  TRACK B  --  HVG selection
+    N_HVG selected   : 2,000
+    Variance cutoff  : 0.2758
+    Variance max     : 10.2705
+
+  UNION + FILTER
+    Union (DEG | HVG)         : 3,031
+    After protein_coding filter: 3,031  (removed 0)
+
+  FINAL FEATURE SET COMPOSITION
+    DEG+HVG (both)  : 45
+    DEG only        : 1,031
+    HVG only        : 1,955
+    TOTAL           : 3,031
+
+  OUTPUT
+    feature_set_final.tsv      -- master annotated list (XGBoost input)
+    feature_selection_plot.png -- variance curve + composition chart
+===================================================

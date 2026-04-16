@@ -1,0 +1,22 @@
+===================================================
+  Week 3 Task 2 -- Infer Directed Edges
+===================================================
+  Total gene pairs analysed : 4,591,965
+  Significance threshold    : p95 = 0.002910
+  Significant pairs         : 229,599
+  Clearly directed (>0.5)   : 198,811 (86.6%)
+  Bidirectional (<=0.5)     : 30,788 (13.4%)
+  A->B directed             : 88,643 (38.6%)
+  B->A directed             : 110,168 (48.0%)
+
+  Top 5 most confident directed edges:
+    USP9Y      -> PCDH11Y    conf=0.3595  score=0.09991
+    KDM5D      -> EIF1AY     conf=0.0955  score=0.09353
+    RPS4Y1     -> KDM5D      conf=0.2128  score=0.08862
+    UTY        -> USP9Y      conf=0.2720  score=0.08736
+    UTY        -> EIF1AY     conf=0.1376  score=0.08652
+
+  Outputs:
+    directed_edge_list.tsv        -- top 50K directed edges
+    direction_confidence_plot.png -- confidence distribution plots
+===================================================

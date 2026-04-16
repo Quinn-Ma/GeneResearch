@@ -1,0 +1,40 @@
+===================================================
+  Week 3 Task 1 -- Gene Regulatory Network
+===================================================
+
+  ALGORITHM     : GENIE3-style ExtraTreesRegressor
+  n_estimators  : 100
+  max_features  : sqrt
+  n_jobs        : -1 (all cores)
+  Runtime       : 160.3s (2.67 min)
+
+  INPUT
+    Expression  : VST-corrected, 433 samples x 3,031 genes
+    Note        : VST is log-scale; no log1p needed
+
+  NETWORK STATISTICS
+    Genes (nodes)       : 3,031
+    Total edges         : 9,183,782
+    Non-zero edges      : 9,183,782
+    Max edge weight     : 0.099908
+    Mean edge weight    : 0.000330
+
+  TOP 10 HUB GENES (by out-strength)
+     1. SLC39A13     out=4.0214  in=1.0000
+     2. STUB1        out=3.6440  in=1.0000
+     3. FKBP8        out=3.5824  in=1.0000
+     4. BTBD2        out=3.5396  in=1.0000
+     5. CTSD         out=3.5214  in=1.0000
+     6. PLXNB2       out=3.4880  in=1.0000
+     7. STK25        out=3.4701  in=1.0000
+     8. MCRIP1       out=3.4289  in=1.0000
+     9. SBF1         out=3.4284  in=1.0000
+    10. PACS2        out=3.2845  in=1.0000
+
+  OUTPUTS
+    network_importance_matrix.tsv.gz  -- full 3031x3031 matrix
+    network_edge_list.tsv             -- all edges (regulator->target, weight)
+    network_top_edges.tsv             -- top 100,000 edges
+    network_hub_genes.tsv             -- hub gene rankings
+    network_degree_plot.png           -- statistics plots
+===================================================

@@ -1,0 +1,31 @@
+===================================================
+  Week 3 Task 3 -- Regulator Ranking
+===================================================
+  Genes ranked    : 3,031
+  Metrics         : out_strength, specificity, directionality, nonlinearity
+  Composite score : avg percentile of out_strength + specificity + nonlinearity
+
+  Top 10 hubs (out_strength):
+     1. SLC39A13     out=4.0214  spec=0.135  NL=0.0020
+     2. STUB1        out=3.6440  spec=0.141  NL=0.0018
+     3. FKBP8        out=3.5824  spec=0.142  NL=0.0018
+     4. BTBD2        out=3.5396  spec=0.151  NL=0.0018
+     5. CTSD         out=3.5214  spec=0.147  NL=0.0018
+     6. PLXNB2       out=3.4880  spec=0.149  NL=0.0017
+     7. STK25        out=3.4701  spec=0.146  NL=0.0017
+     8. MCRIP1       out=3.4289  spec=0.154  NL=0.0017
+     9. SBF1         out=3.4284  spec=0.152  NL=0.0017
+    10. PACS2        out=3.2845  spec=0.155  NL=0.0017
+
+  Top 5 non-linear regulators (WGCNA-invisible):
+    KDM5D         ET=0.00041  |r|=0.0581  NL=0.0070
+    RPS4Y1        ET=0.00041  |r|=0.0611  NL=0.0067
+    F8A3          ET=0.00011  |r|=0.0222  NL=0.0050
+    DDX3Y         ET=0.00037  |r|=0.0734  NL=0.0050
+    NLGN4Y        ET=0.00035  |r|=0.0705  NL=0.0050
+
+  Outputs:
+    regulator_rankings.tsv      -- 3031-gene ranked table
+    nonlinear_regulators.tsv    -- top 100 non-linear regulators
+    regulator_ranking_plot.png  -- hub bars + NL scatter
+===================================================
