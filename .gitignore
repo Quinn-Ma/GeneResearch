@@ -1,38 +1,5 @@
-# ── Large data matrices (too large for GitHub) ─────────────────────────
-# Raw / intermediate count matrices
-Genelevel_expectedcounts_matrix.tsv
-week1/task1_gene_filtering/Genelevel_filtered_counts.tsv
-week1/task2_sample_qc/Genelevel_QC_counts.tsv
-
-# VST-corrected expression matrix (110 MB)
-week1/task3_confounder_correction/Genelevel_VST_corrected.tsv
-
-# Network files (>25 MB)
-week3/task1_build_network/network_importance_matrix.npy
-week3/task1_build_network/network_importance_matrix.tsv.gz
-week3/task1_build_network/network_edge_list.tsv
-
-# ── General binary / compressed patterns ──────────────────────────────
-*.npy
-*.tsv.gz
-*.h5
-*.hdf5
-*.pkl
-*.pickle
-*.RData
-*.rds
-
-# ── Python ────────────────────────────────────────────────────────────
+﻿.claude/
+*.log
 __pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-env/
-
-# ── Jupyter ───────────────────────────────────────────────────────────
-.ipynb_checkpoints/
-
-# ── OS ────────────────────────────────────────────────────────────────
+*.pyc
 .DS_Store
-Thumbs.db

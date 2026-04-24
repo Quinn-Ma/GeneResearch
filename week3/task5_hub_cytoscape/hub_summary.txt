@@ -1,0 +1,51 @@
+===================================================
+  Week 3 Task 5 -- Hub Regulators & Cytoscape Export
+===================================================
+
+  Date : 2026-04-23 19:33
+  Input: filtered_edge_list.tsv  (25,406 edges)
+
+  HUB ANALYSIS (out-degree in filtered network)
+    Total regulators  : 2,458
+    Max out-degree    : 68  (PLXNB2)
+    Top-100 threshold : out_degree >= 33
+
+  TOP 10 HUB REGULATORS
+      1. PLXNB2         out=68
+      2. SLC39A13       out=66
+      3. CTSD           out=63
+      4. FKBP8          out=61
+      5. CIC            out=59
+      6. SBF1           out=59
+      7. STUB1          out=57
+      8. PACS2          out=56
+      9. BTBD2          out=54
+     10. MCRIP1         out=54
+
+  DEG OVERLAP (MGS4_vs_MGS1)
+    Hub genes that are also DEGs : 0
+
+
+  CYTOSCAPE EXPORT
+    cytoscape_edges.csv  -- 25,406 edges
+      Columns: Source_Node | Target_Node | Weight | Direction_Confidence
+    cytoscape_nodes.csv  -- 2,873 nodes
+      Columns: Gene_Symbol | Ensembl_ID | Out_Degree | Is_Hub | Log2FC_MGS4 | Padj_MGS4 | Is_DEG_MGS4
+
+  CYTOSCAPE IMPORT GUIDE
+    1. File > Import > Network from File > cytoscape_edges.csv
+       Source col: Source_Node  |  Target col: Target_Node
+       Edge attr : Weight, Direction_Confidence
+    2. File > Import > Table from File > cytoscape_nodes.csv
+       Key col: Gene_Symbol
+    3. Style > Edge width   -> map to Weight (continuous)
+    4. Style > Node size    -> map to Out_Degree (continuous)
+    5. Style > Node fill    -> map to Log2FC_MGS4 (diverging: blue-white-red)
+    6. Style > Node border  -> Is_Hub=True  -> thick gold border
+
+  OUTPUTS (task5_hub_cytoscape/)
+    top100_hub_regulators.tsv
+    cytoscape_edges.csv
+    cytoscape_nodes.csv
+    hub_summary.txt
+===================================================

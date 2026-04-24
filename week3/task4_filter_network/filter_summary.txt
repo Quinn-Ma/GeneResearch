@@ -1,0 +1,27 @@
+===================================================
+  Week 3 Task 4 -- Filtered Edge List
+===================================================
+
+  STRATEGY      : B — top-10 regulators per target
+  Source        : directed_edge_list.tsv (50 K edges)
+  Date          : 2026-04-23 19:33
+
+  INPUT EDGES   : 50,000
+  OUTPUT EDGES  : 25,406  (50.8% retained)
+
+  WEIGHT STATS
+    Min   : 0.006402
+    Max   : 0.099908
+    Mean  : 0.010574
+    P25   : 0.008351
+    P50   : 0.009982
+    P75   : 0.011777
+
+  GRAPH NODES
+    Unique regulators : 2,458
+    Unique targets    : 2,850
+    Total unique nodes: 2,873
+
+  OUTPUTS
+    filtered_edge_list.tsv  -- 25,406 high-confidence edges
+===================================================

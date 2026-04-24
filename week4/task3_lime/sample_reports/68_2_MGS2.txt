@@ -1,0 +1,29 @@
+=======================================================
+  PERSONALIZED BIOMARKER REPORT
+=======================================================
+  Sample ID   : 68_2
+  True MGS    : MGS2
+  Predicted   : MGS2  (confidence=39.5%)
+  Status      : CORRECT
+
+  TOP 10 DRIVING BIOMARKERS FOR THIS PATIENT
+  (+ = pushes toward MGS2 diagnosis)
+  (- = protects against / pulls away)
+  Rank  Gene           LIME WeightEffect              
+  ----------------------------------------------------
+  1     GBP2               -0.0223  Protective / opposing
+  2     NDUFS5             +0.0186  Drives diagnosis
+  3     FBXO33             +0.0166  Drives diagnosis
+  4     UTP14C             +0.0149  Drives diagnosis
+  5     ZFP82              +0.0095  Drives diagnosis
+  6     HLA-DQA1           +0.0093  Drives diagnosis
+  7     KRT40              -0.0072  Protective / opposing
+  8     CLCN3              -0.0070  Protective / opposing
+  9     STMN4              +0.0070  Drives diagnosis
+  10    HLA-DOB            -0.0033  Protective / opposing
+
+  CLINICAL INTERPRETATION
+  The top genes above explain why this patient's retina
+  was classified as MGS2.  Unlike population-level
+  statistics, this profile is unique to THIS patient.
+=======================================================

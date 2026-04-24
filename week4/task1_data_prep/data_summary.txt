@@ -1,0 +1,39 @@
+===================================================
+  Week 4 Task 1 & 2 -- Data Preparation
+===================================================
+
+  Date          : 2026-04-23 19:47
+
+  INPUT
+    Expression  : Genelevel_VST_corrected.tsv  (14,809 genes × 433 samples)
+    MetaSheet   : MetaSheet_QC.csv  (433 samples)
+    Features    : feature_set_final.tsv  (3,031 genes)
+
+  ALIGNED DATASET
+    Samples     : 433 (intersection via r_id key)
+    Features    : 3,031 genes  (100.0% of feature set)
+    Target      : mgs_level (4 classes, 0-indexed)
+
+  CLASS DISTRIBUTION
+    MGS1 (0)    : 101 total  (81 train / 20 test)
+    MGS2 (1)    : 165 total  (132 train / 33 test)
+    MGS3 (2)    : 108 total  (86 train / 22 test)
+    MGS4 (3)    : 59 total  (47 train / 12 test)
+    NOTE: Class imbalance (MGS4 smallest) → TabNet will use inverse-frequency weights
+
+  SPLIT
+    Strategy    : Stratified train/test split  (80% / 20%, seed=42)
+    Train       : 346 samples × 3,031 features
+    Test        : 87 samples × 3,031 features
+
+  PREPROCESSING
+    Scaling     : StandardScaler (fit on train, transform both)
+    Note        : VST is log-scale — no log1p needed
+
+  OUTPUTS (task1_data_prep/)
+    X_train.npy, X_test.npy      -- scaled expression arrays (float32)
+    y_train.npy, y_test.npy      -- integer class labels (0-3)
+    feature_syms.npy             -- gene symbol array (3031,)
+    train_ids.npy, test_ids.npy  -- r_id strings for traceability
+    scaler.pkl                   -- fitted StandardScaler
+===================================================

@@ -1,0 +1,29 @@
+=======================================================
+  PERSONALIZED BIOMARKER REPORT
+=======================================================
+  Sample ID   : 223_4
+  True MGS    : MGS4
+  Predicted   : MGS4  (confidence=33.0%)
+  Status      : CORRECT
+
+  TOP 10 DRIVING BIOMARKERS FOR THIS PATIENT
+  (+ = pushes toward MGS4 diagnosis)
+  (- = protects against / pulls away)
+  Rank  Gene           LIME WeightEffect              
+  ----------------------------------------------------
+  1     RHOU               -0.0274  Protective / opposing
+  2     PIGH               +0.0157  Drives diagnosis
+  3     MATR3              +0.0144  Drives diagnosis
+  4     ZNF662             -0.0134  Protective / opposing
+  5     XXbac-BPG32J3.22     -0.0124  Protective / opposing
+  6     SYS1-DBNDD2        -0.0108  Protective / opposing
+  7     PDCD2              -0.0106  Protective / opposing
+  8     GADD45B            -0.0032  Protective / opposing
+  9     HAUS2              -0.0016  Protective / opposing
+  10    MATN2              -0.0013  Protective / opposing
+
+  CLINICAL INTERPRETATION
+  The top genes above explain why this patient's retina
+  was classified as MGS4.  Unlike population-level
+  statistics, this profile is unique to THIS patient.
+=======================================================

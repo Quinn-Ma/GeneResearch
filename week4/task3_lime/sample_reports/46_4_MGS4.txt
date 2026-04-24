@@ -1,0 +1,29 @@
+=======================================================
+  PERSONALIZED BIOMARKER REPORT
+=======================================================
+  Sample ID   : 46_4
+  True MGS    : MGS4
+  Predicted   : MGS4  (confidence=31.3%)
+  Status      : CORRECT
+
+  TOP 10 DRIVING BIOMARKERS FOR THIS PATIENT
+  (+ = pushes toward MGS4 diagnosis)
+  (- = protects against / pulls away)
+  Rank  Gene           LIME WeightEffect              
+  ----------------------------------------------------
+  1     KCNH8              +0.0314  Drives diagnosis
+  2     GAD2               -0.0143  Protective / opposing
+  3     RPE65              +0.0136  Drives diagnosis
+  4     RPS4Y1             +0.0124  Drives diagnosis
+  5     EGR2               +0.0120  Drives diagnosis
+  6     GDAP2              +0.0061  Drives diagnosis
+  7     STRADA             +0.0057  Drives diagnosis
+  8     SNX17              +0.0043  Drives diagnosis
+  9     RBM3               -0.0021  Protective / opposing
+  10    ZFX                +0.0020  Drives diagnosis
+
+  CLINICAL INTERPRETATION
+  The top genes above explain why this patient's retina
+  was classified as MGS4.  Unlike population-level
+  statistics, this profile is unique to THIS patient.
+=======================================================

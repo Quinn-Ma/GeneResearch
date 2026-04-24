@@ -1,0 +1,52 @@
+
+===================================================
+  Week 3 Task 5 — Cytoscape AMD Annotation
+===================================================
+
+  Date   : 2026-04-24 13:13
+  AMD gene reference: Fritsche et al. 2016 Nat Genet
+                      + classic AMD biology genes
+  Reference set size: 64 genes
+
+  NETWORK BREAKDOWN
+    Total nodes           : 2873
+    Known AMD genes       : 17  (0.6%)
+    Novel Hub regulators  : 100  ← NEW FINDINGS
+    Known AMD + Hub       : 0
+
+  KEY BIOLOGICAL FINDING
+    All 100 Top-100 Hub genes are absent from AMD GWAS loci.
+    They are NOVEL regulatory drivers not previously linked to AMD
+    — high-priority candidates for follow-up experiments.
+
+    Top novel hubs (blue stars in Cytoscape):
+      PLXNB2       out=68
+      SLC39A13     out=66
+      CTSD         out=63
+      FKBP8        out=61
+      SBF1         out=59
+
+  CYTOSCAPE NODE COLOUR GUIDE
+    RED   (#E63946) — Known_AMD_Hub   : known AMD gene AND hub regulator
+    ORANGE(#F4A261) — Known_AMD       : known AMD gene, not a hub
+    BLUE  (#457B9D) — Novel_Hub       : hub regulator, NOT in AMD GWAS (new!)
+    TEAL  (#A8DADC) — Network_Gene    : background node
+
+  HOW TO APPLY STYLE IN CYTOSCAPE
+    1. Import > Network from File > cytoscape_edges.csv
+    2. Import > Table from File  > cytoscape_nodes.csv (Key = Gene_Symbol)
+    3. Style panel > Fill Color > Discrete Mapping > Node_Category
+         Known_AMD_Hub  → #E63946 (red),  size=60, shape=STAR
+         Known_AMD      → #F4A261 (orange),size=40, shape=ELLIPSE
+         Novel_Hub      → #457B9D (blue),  size=40, shape=STAR
+         Network_Gene   → #A8DADC (teal),  size=15, shape=ELLIPSE
+    4. Edge Width → continuous mapping → Weight  (thin=weak, thick=strong)
+    5. Label → Gene_Symbol
+
+  OUTPUTS (updated)
+    cytoscape_nodes.csv  — now includes:
+      Node_Category     (Known_AMD_Hub / Known_AMD / Novel_Hub / Network_Gene)
+      Is_Known_AMD      (True/False)
+      Suggested_Color   (hex code)
+      Suggested_Size    (px)
+===================================================

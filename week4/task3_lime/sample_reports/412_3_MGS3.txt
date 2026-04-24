@@ -1,0 +1,29 @@
+=======================================================
+  PERSONALIZED BIOMARKER REPORT
+=======================================================
+  Sample ID   : 412_3
+  True MGS    : MGS3
+  Predicted   : MGS3  (confidence=59.1%)
+  Status      : CORRECT
+
+  TOP 10 DRIVING BIOMARKERS FOR THIS PATIENT
+  (+ = pushes toward MGS3 diagnosis)
+  (- = protects against / pulls away)
+  Rank  Gene           LIME WeightEffect              
+  ----------------------------------------------------
+  1     STIM2              +0.0193  Drives diagnosis
+  2     C16orf58           -0.0187  Protective / opposing
+  3     PSD                -0.0165  Protective / opposing
+  4     ECE1               -0.0162  Protective / opposing
+  5     RPS3               -0.0126  Protective / opposing
+  6     MT1F               -0.0124  Protective / opposing
+  7     FAM65A             -0.0076  Protective / opposing
+  8     ZNF414             -0.0067  Protective / opposing
+  9     CTC-435M10.3       +0.0047  Drives diagnosis
+  10    ARFGAP1            +0.0006  Drives diagnosis
+
+  CLINICAL INTERPRETATION
+  The top genes above explain why this patient's retina
+  was classified as MGS3.  Unlike population-level
+  statistics, this profile is unique to THIS patient.
+=======================================================

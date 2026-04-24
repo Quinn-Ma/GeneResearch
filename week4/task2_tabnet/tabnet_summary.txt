@@ -1,0 +1,47 @@
+===================================================
+  Week 4 Task 3 -- TabNet Classifier
+===================================================
+
+  Date          : 2026-04-23 19:49
+  Device        : CUDA
+  Runtime       : 10.1s
+
+  ARCHITECTURE (2-stage training)
+    Stage 1     : All 3031 features, quick run → attention-based gene ranking
+    Stage 2     : Top-500 attention genes, full training
+    n_d / n_a   : 32 (feature embedding width)
+    n_steps     : 4  (sequential attention rounds)
+    gamma       : 1.3
+    lambda_sparse: 1e-3
+    batch_size  : 128 (virtual: 32)
+    Class weights: inverse-frequency  (handles MGS4 imbalance)
+
+  PERFORMANCE
+    Accuracy         : 0.3103  (31.0%)
+    Balanced Accuracy: 0.2652
+    Macro AUC (OVR)  : 0.5880
+
+  PER-CLASS METRICS
+              precision    recall  f1-score   support
+
+        MGS1       0.00      0.00      0.00        20
+        MGS2       0.47      0.48      0.48        33
+        MGS3       0.25      0.41      0.31        22
+        MGS4       0.17      0.17      0.17        12
+
+    accuracy                           0.31        87
+   macro avg       0.22      0.27      0.24        87
+weighted avg       0.26      0.31      0.28        87
+
+
+  TOP 5 GENES (TabNet attention)
+    THAP4, MMGT1, KCNH8, ZNF562, ECSIT
+
+  OUTPUTS
+    tabnet_model.zip            -- saved model (reload with clf.load_model)
+    confusion_matrix.png        -- raw + normalized confusion matrix
+    roc_curves.png              -- one-vs-rest ROC per MGS class
+    feature_importances.tsv     -- 500 genes ranked by attention
+    feature_importance_plot.png -- top-30 bar chart
+    test_predictions.csv        -- per-sample predictions + probabilities
+===================================================

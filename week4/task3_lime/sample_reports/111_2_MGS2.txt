@@ -1,0 +1,29 @@
+=======================================================
+  PERSONALIZED BIOMARKER REPORT
+=======================================================
+  Sample ID   : 111_2
+  True MGS    : MGS2
+  Predicted   : MGS2  (confidence=55.0%)
+  Status      : CORRECT
+
+  TOP 10 DRIVING BIOMARKERS FOR THIS PATIENT
+  (+ = pushes toward MGS2 diagnosis)
+  (- = protects against / pulls away)
+  Rank  Gene           LIME WeightEffect              
+  ----------------------------------------------------
+  1     SDF4               +0.0275  Drives diagnosis
+  2     ATAD3A             +0.0193  Drives diagnosis
+  3     AP1B1              +0.0179  Drives diagnosis
+  4     FASN               +0.0169  Drives diagnosis
+  5     DUS1L              +0.0163  Drives diagnosis
+  6     CAPZA1             -0.0157  Protective / opposing
+  7     PGAM2              -0.0123  Protective / opposing
+  8     TSNARE1            -0.0070  Protective / opposing
+  9     LSS                +0.0043  Drives diagnosis
+  10    MRPL54             -0.0040  Protective / opposing
+
+  CLINICAL INTERPRETATION
+  The top genes above explain why this patient's retina
+  was classified as MGS2.  Unlike population-level
+  statistics, this profile is unique to THIS patient.
+=======================================================

@@ -1,0 +1,39 @@
+===================================================
+  Week 4 Task 4 -- LIME Personalized Analysis
+===================================================
+
+  Date              : 2026-04-23 19:49
+  Runtime           : 10.2s
+  Test samples      : 87  (correct=27, 31.0%)
+
+  LIME PARAMETERS
+    num_features    : 10 per patient
+    num_samples     : 300 (perturbations per explanation)
+    Explained class : predicted class (personalized)
+
+  TOP 10 MOST UNIVERSAL BIOMARKERS
+  (ranked by frequency across all 87 test patients)
+     1. KCNH8        freq=24/87 (27.6%)  direction=activating
+     2. SEZ6L2       freq=13/87 (14.9%)  direction=activating
+     3. FBN2         freq=8/87 (9.2%)  direction=suppressing
+     4. STIM2        freq=7/87 (8.0%)  direction=activating
+     5. FBXO33       freq=7/87 (8.0%)  direction=suppressing
+     6. GADD45B      freq=7/87 (8.0%)  direction=activating
+     7. TIPARP       freq=7/87 (8.0%)  direction=activating
+     8. RPS4Y1       freq=6/87 (6.9%)  direction=activating
+     9. FOSB         freq=6/87 (6.9%)  direction=suppressing
+    10. ARL2-SNX15   freq=6/87 (6.9%)  direction=suppressing
+
+  KEY INSIGHT
+    These genes appear in the top-10 explanation for the
+    majority of patients — they are the AMD "network backbone".
+    But each patient's FULL top-10 profile is unique, enabling
+    precision medicine / personalized biomarker reports.
+
+  OUTPUTS
+    top50_lime_genes.tsv      -- 50 genes with freq, mean weight, direction
+    sample_predictions.csv    -- per-patient predicted class + top genes
+    sample_reports/           -- 6 individual patient PDFs
+    lime_heatmap.png          -- patient × gene LIME weight matrix
+    lime_top50_frequency.png  -- gene frequency bar chart
+===================================================
